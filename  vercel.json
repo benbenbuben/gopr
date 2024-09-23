@@ -8,12 +8,17 @@
   ],
   "routes": [
     {
-      "src": "/write",
+      "src": "/*",
       "dest": "main.go",
       "methods": ["GET"]
     },
     {
       "src": "/read",
+      "dest": "main.go",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/write",
       "dest": "main.go",
       "methods": ["GET"]
     }
