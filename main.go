@@ -26,7 +26,10 @@ func main() {
     log.Printf("Server listening on port %s", port)
     log.Fatal(http.ListenAndServe(":"+port, nil))
 }
-
+func defaultHandler(w http.ResponseWriter, r *http.Request) {
+    data := Data{String: "Hello, World!"}
+    json.NewEncoder(w).Encode(data)
+}
 func writeHandler(w http.ResponseWriter, r *http.Request) {
     str := r.URL.Query().Get("string")
     if str == "" {
