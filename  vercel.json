@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "main.go",
+      "src": "./",
       "use": "@vercel/go"
     }
   ],
@@ -17,5 +17,10 @@
       "dest": "/read",
       "methods": ["GET"]
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "GO_VERSION": "1.16"
+    }
+  }
 }
