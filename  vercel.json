@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/write",
+      "dest": "/write",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/read",
+      "dest": "/read",
+      "methods": ["GET"]
+    }
+  ]
+}
