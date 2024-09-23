@@ -15,6 +15,7 @@ type Data struct {
 }
 
 func main() {
+    http.HandleFunc("/", defaultHandler)
     http.HandleFunc("/write", writeHandler)
     http.HandleFunc("/read", readHandler)
     
