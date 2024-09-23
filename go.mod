@@ -1,3 +1,3 @@
-   module your-project
+   module gopr
    
    go 1.16
